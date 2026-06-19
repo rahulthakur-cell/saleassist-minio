@@ -1,3 +1,5 @@
 FROM minio/minio:latest
 
-CMD sh -c 'minio server /data --address ":${PORT}"'
+ENTRYPOINT []
+
+CMD ["/bin/sh", "-c", "minio server /data --address :${PORT} --console-address :9001"]
